@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <!-- Glowing Accent Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- Filter for Glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      fill: #ffffff;
+    }
+    .subtitle {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      fill: #94a3b8;
+    }
+    .badge-text {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #38bdf8;
+    }
+    
+    /* Dynamic Animated Elements */
+    @keyframes pulseParticle {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.3); }
+    }
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes dashLine {
+      to { stroke-dashoffset: -40; }
+    }
+    @keyframes wavePulse {
+      0%, 100% { height: 20px; y: 260px; }
+      50% { height: 50px; y: 230px; }
+    }
+
+    .particle { animation: pulseParticle 4s infinite ease-in-out; }
+    .p1 { animation-delay: 0s; }
+    .p2 { animation-delay: 1.5s; }
+    .p3 { animation-delay: 2.5s; }
+    
+    .animated-card { animation: floatCard 6s infinite ease-in-out; }
+    .flow-line { stroke-dasharray: 8 6; animation: dashLine 2s linear infinite; }
+  </style>
+
+  <!-- Base Dark Background -->
+  <rect width="1200" height="350" rx="16" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Grid Pattern in background -->
+  <g opacity="0.05">
+    <path d="M0 50H1200 M0 100H1200 M0 150H1200 M0 200H1200 M0 250H1200 M0 300H1200" stroke="#ffffff" stroke-width="1"/>
+    <path d="M100 0V350 M200 0V350 M300 0V350 M400 0V350 M500 0V350 M600 0V350 M700 0V350 M800 0V350 M900 0V350 M1000 0V350 M1100 0V350" stroke="#ffffff" stroke-width="1"/>
+  </g>
+
+  <!-- BACKGROUND DYNAMIC ELEMENTS (Behind Text) -->
+  <!-- Animated Glow Orbs -->
+  <circle cx="950" cy="120" r="140" fill="#6366f1" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="1050" cy="220" r="90" fill="#06b6d4" opacity="0.15" filter="url(#glow)"/>
+
+  <!-- Network / DNA Nodes (Right side visual accent) -->
+  <g opacity="0.4" transform="translate(700, 40)">
+    <line x1="100" y1="100" x2="220" y2="60" stroke="#818cf8" stroke-width="2" class="flow-line"/>
+    <line x1="220" y1="60" x2="340" y2="120" stroke="#818cf8" stroke-width="2" class="flow-line"/>
+    <line x1="100" y1="100" x2="200" y2="200" stroke="#38bdf8" stroke-width="2" class="flow-line"/>
+    <line x1="200" y1="200" x2="340" y2="120" stroke="#38bdf8" stroke-width="2" class="flow-line"/>
+    
+    <circle cx="100" cy="100" r="7" fill="#38bdf8" class="particle p1"/>
+    <circle cx="220" cy="60" r="9" fill="#c084fc" class="particle p2"/>
+    <circle cx="340" cy="120" r="8" fill="#818cf8" class="particle p3"/>
+    <circle cx="200" cy="200" r="10" fill="#38bdf8" class="particle p1"/>
+  </g>
+
+  <!-- Decorative Animated Card Element in Right Corner -->
+  <g class="animated-card" transform="translate(840, 70)">
+    <rect width="300" height="190" rx="14" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+    <!-- Card Content Wireframe -->
+    <rect x="24" y="24" width="90" height="20" rx="10" fill="#38bdf8" opacity="0.2"/>
+    <text x="34" y="38" class="badge-text">AI MATCHING</text>
+    
+    <rect x="24" y="60" width="220" height="8" rx="4" fill="#ffffff" opacity="0.3"/>
+    <rect x="24" y="76" width="170" height="8" rx="4" fill="#ffffff" opacity="0.2"/>
+
+    <!-- Dynamic Mini Graph Bars -->
+    <rect x="24" y="110" width="16" height="40" rx="3" fill="#38bdf8" opacity="0.8"/>
+    <rect x="48" y="125" width="16" height="25" rx="3" fill="#818cf8" opacity="0.6"/>
+    <rect x="72" y="95" width="16" height="55" rx="3" fill="#c084fc" opacity="0.9"/>
+    <rect x="96" y="115" width="16" height="35" rx="3" fill="#38bdf8" opacity="0.7"/>
+
+    <circle cx="220" cy="120" r="28" fill="none" stroke="url(#accentGrad)" stroke-width="5" stroke-dasharray="120 40"/>
+    <text x="206" y="125" font-family="sans-serif" font-weight="bold" font-size="14" fill="#ffffff">98%</text>
+  </g>
+
+  <!-- FOREGROUND CONTENT (Guaranteed Clear Visibility) -->
+  <!-- Top Pill / Category Tag -->
+  <g transform="translate(70, 55)">
+    <rect width="320" height="32" rx="16" fill="rgba(56, 189, 248, 0.1)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1"/>
+    <circle cx="16" cy="16" r="5" fill="#38bdf8"/>
+    <text x="30" y="21" class="badge-text" letter-spacing="1">CLINICAL TRIAL ECOSYSTEM</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="70" y="140" class="title">
+    Awesome Clinical Trial
+  </text>
+  <text x="70" y="195" class="title" fill="url(#accentGrad)">
+    Recruitment Platforms
+  </text>
+
+  <!-- Subtitle -->
+  <text x="70" y="242" class="subtitle">
+    Curated SaaS Solutions, Open-Source Systems &amp; AI-Powered Patient Matching
+  </text>
+
+  <!-- Bottom Accent Bar -->
+  <rect x="70" y="275" width="480" height="4" rx="2" fill="url(#accentGrad)"/>
+</svg>

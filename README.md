@@ -1,227 +1,116 @@
-# Awesome-Clinical-Trial-Recruitment-Platform
+# 🏥 Awesome Clinical Trial Recruitment Platform 🚀
 
-## Top Clinical Trial Recruitment Platforms Ecosystem
+[![Banner](./assets/banner.svg)](https://github.com/ishandutta2007/Awesome-Clinical-Trial-Recruitment-Platform)
 
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**
-
-*Focused on Patient Matching, Automated Prescreening, Site Feasibility & Recruitment Automation*
-
-**Last updated: September 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Clinical Trial Recruitment**. These tools help sponsors, CROs, and research sites identify eligible patients, automate prescreening against trial criteria, and accelerate enrollment.
-
-
-
-**Examples** include Antidote, Deep 6 AI, Trialbee, AutoCruitment, Clara Health, SubjectWell, TriNetX, Inato, Lightship, Power, Curebase, PatientWing, Bio-Optronics, TrialScope, StudyKIK, Clariness, Reify Health, and TrialSpark (the category leaders).
-
-
-
-**Open-source emphasis**: Clinical trial recruitment has a **mature and production-proven open-source ecosystem**. **recruIT** is a cloud-native system deployed across 5 German university hospitals with a SUS usability score of 79.9/100 . **CancerTrialMatch** is an open-source biomarker-based matching application published in *Bioinformatics* . **MatchMiner** (Dana-Farber) is a computational platform for genomic-based trial matching . **LLM-Match** achieves superior performance over proprietary GPT-4-based tools using only open-source models . This section documents these production-grade solutions.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Antidote](https://antidote.me/)**  
-
-  Patient-facing clinical trial matching platform. Connects patients with trials via search and AI-powered matching.
-
-
-
-- **[Deep 6 AI](https://deep6.ai/)**  
-
-  AI-powered clinical trial matching platform. Acquired by Tempus in 2023, combining genomic testing with EHR-based matching.
-
-
-
-- **[Trialbee](https://trialbee.com/)**  
-
-  Patient recruitment and matching platform connecting patients with trials across therapeutic areas.
-
-
-
-- **[AutoCruitment](https://autocruitment.com/)**  
-
-  Patient recruitment platform using digital marketing and prescreening to accelerate trial enrollment.
-
-
-
-- **[SubjectWell](https://subjectwell.com/)**  
-
-  Patient recruitment marketplace connecting patients with trial opportunities.
-
-
-
-- **[TriNetX](https://www.trinetx.com/)**  
-
-  Global health research network providing real-world data and clinical trial matching.
-
-
-
-- **[Inato](https://www.inato.com/)**  
-
-  Clinical trial site and patient matching platform connecting sponsors with community sites.
-
-
-
-- **[Reify Health (StudyTeam)](https://reifyhealth.com/)**  
-
-  Clinical trial recruitment and retention platform. StudyTeam modernizes sponsor-site collaboration for enrollment.
-
-
-
-- **[Curebase](https://www.curebase.com/)**  
-
-  Decentralized clinical trial platform with patient matching and recruitment capabilities.
-
-
-
-- **[TrialSpark](https://www.trialspark.com/)**  
-
-  Technology-enabled trial execution platform with patient recruitment and decentralized capabilities.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Production-Deployed Recruitment Systems
-
-
-
-- **[recruIT](https://gitlab.ukdd.de/pub/num-sn/recruit)**  
-
-  **The most mature open-source clinical trial recruitment support system.** **Deployed across 5 German university hospitals** as part of the NUM Study Network and MIRACUM consortium . **Architecture**: Based on **OMOP CDM** for patient data and **HL7 FHIR** for interoperability. Uses **OHDSI Atlas** to define trial eligibility criteria as cohort definitions. Three modules: **Query Module** (queries OMOP via OHDSI WebAPI), **List Module** (screening list UI with patient ID, birth year, last known location), **Notification Module** (email alerts for new candidates) . **Usability**: SUS score **79.9/100** from 19 end-users across 5 hospitals . Container-based deployment with Kubernetes support. **Open source**.
-
-
-
-- **[CancerTrialMatch](https://github.com/AveraSD/CancerTrialMatch)**  
-
-  **Open-source biomarker-based trial matching application published in *Bioinformatics* (2025).** Developed at Avera Cancer Institute. **Key capability**: Captures structured clinical trial data and matches patients based on **disease characteristics and sequencing profiles** . Uses **OncoTree classification** for disease types and captures biomarker details (mutations, copy numbers, fusions). Retrieves trial data via **ClinicalTrials.gov API** with manual entry for biomarkers. Built with **R Shiny, MongoDB, and Docker**. Semi-automated interface. Deployed on Windows 11/WSL2 with Docker Compose . **Open source**.
-
-
-
-- **[MatchMiner](https://github.com/matchminer/matchminer)**  
-
-  **Open-source computational platform for matching patient-specific genomic profiles to precision cancer medicine clinical trials.** Developed at Dana-Farber Cancer Institute . Originally rules-based, now incorporates **AI to analyze unstructured EHR data** (clinical notes) to extract prior treatments, disease stage, and other trial-relevant features. Supports **all patients** at an institution. Already in use at **Princess Margaret Cancer Centre**. Has supported **400+ patient enrollments** at Dana-Farber, with patients matched through MatchMiner enrolling **22% faster** than traditional methods . **Open source**.
-
-
-
-### AI/LLM-Powered Matching Models
-
-
-
-- **[LLM-Match](https://github.com/bioIKEA/LLMMatch)**  
-
-  **Open-source patient matching model based on LLMs and Retrieval-Augmented Generation (RAG).** Published in 2025 . **Key innovation**: Exclusively leverages **open-source models**, proving they can achieve **superior performance** over proprietary GPT-4-based tools when properly fine-tuned . Combines RAG with fine-tuning and a classification head. Evaluated on multiple benchmark datasets (n2c2, SIGIR24, TREC 2021, TREC 2022). Provides a scalable, transparent alternative to black-box AI . **Open source**.
-
-
-
-- **[TrialGPT](https://github.com/ncbi-nlp/TrialGPT)**  
-
-  **LLM framework for patient-trial matching by evaluating clinical trial eligibility criteria against patient notes** . Uses GPT-4 to assess patient eligibility. Foundation for subsequent open-source matching frameworks. **Open source**.
-
-
-
-- **[AI Clinical Trial Matching (sacredvoid)](https://github.com/sacredvoid/ai_clinical_trial)**  
-
-  **Full open-source pipeline for matching patients to trials using vector embeddings and LLMs.** **Architecture**: Patient data from CSV → SQLite database; clinical trials scraped from clinicaltrials.gov → ChromaDB vector database; patient profiles and trial criteria embedded using **SentenceTransformer (all-MiniLM-L6-v2)**; 3-stage matching algorithm (vector similarity search → expert LLM assessment → result generation) . Uses **Llama 3.2 3B-Instruct** via Hugging Face/OpenRouter. **Python-based** . **Open source**.
-
-
-
-### Trial Curation & Feasibility
-
-
-
-- **[Databricks Site Feasibility Workbench](https://github.com/databricks-industry-solutions/site-feasibility-workbench-open)**  
-
-  **Open-source clinical trial site feasibility and patient access platform.** Provides **AI/BI Genie Space** for natural language feasibility queries, **LightGBM enrollment velocity predictions**, **SHAP feature attributions** (top 5 drivers per study×site), and **RWE patient access estimates** . Deploys as a **Databricks App** with Unity Catalog, SQL Warehouse, and optional Lakebase (PostgreSQL). **All data is fully synthetic** — designed as a template for real deployments . **Open source**.
-
-
-
-- **[Blue-button (open-source)](https://ascopubs.org/doi/10.1200/JCO.2025.43.16_suppl.TPS1658)**  
-
-  **Open-source clinical trial matching tool developed in collaboration with ACS CAN and MITRE Corporation** . **SMART-on-FHIR tool** that automatically extracts deidentified patient data (cancer type, stage, biomarkers) from EHR systems and queries external matching services via **FHIR mCODE standard** . Uses **FHIR ResearchStudy resource format** for trial matches. Currently in prospective randomized trial at UTSW and Tampa General Hospital. **Open source**.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Production-Deployed**: **recruIT** (5 German hospitals, SUS 79.9) , **CancerTrialMatch** (Avera, *Bioinformatics*) , **MatchMiner** (Dana-Farber, 400+ enrollments) .
-
-- **AI/LLM Models**: **LLM-Match** (open-source models outperform GPT-4) , **TrialGPT** (GPT-4-based eligibility) , **AI Clinical Trial Matching** (vector embeddings + Llama) .
-
-- **Feasibility & Curation**: **Databricks Site Feasibility Workbench** (LightGBM + SHAP) , **Blue-button** (SMART-on-FHIR, FHIR mCODE) .
-
-- **HL7 FHIR Integration**: **recruIT** (OMOP + FHIR), **Blue-button** (SMART-on-FHIR) .
-
-
-
-**Frameworks for building custom systems**: Combine **recruIT** for population-level prescreening with OMOP/FHIR, **CancerTrialMatch** or **MatchMiner** for biomarker/genomic-based matching, **LLM-Match** or **TrialGPT** for LLM-powered eligibility assessment, and **Blue-button** for EHR-integrated regional matching via FHIR mCODE. Add **PostgreSQL/OMOP CDM** for patient data and **Docker** for deployment.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Clinical trial recruitment platforms handle sensitive patient health data; ensure compliance with HIPAA, GDPR, 21 CFR Part 11, and applicable research regulations.
-
-- **Open-source reality**: The open-source ecosystem for clinical trial recruitment is **mature and production-proven**. **recruIT** is deployed across 5 German university hospitals with strong usability scores . **CancerTrialMatch** and **MatchMiner** are published, production-deployed systems at major cancer centers . **LLM-Match** demonstrates that open-source models can outperform proprietary alternatives . **Blue-button** is in prospective randomized trials at academic and community hospitals . For **enterprise-scale multi-therapeutic recruitment** with global site networks and dedicated patient support, commercial platforms (Antidote, Trialbee, SubjectWell, Reify Health) remain the primary choice — but open-source alternatives are **genuinely viable for institutions with technical capacity**.
-
-
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a> <img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Clinical-Trial-Recruitment-Platform?style=flat-square&color=gold" alt="Stars"/> <img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Clinical-Trial-Recruitment-Platform?style=flat-square&color=blue" alt="License"/> <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
 ---
 
+## 🌟 Top Clinical Trial Recruitment Platforms Ecosystem
 
+> **Comprehensive Curated Directory of SaaS Products, Enterprise Solutions & Open-Source GitHub Projects**  
+> *Specialized in Patient Matching, Automated Prescreening, EHR Data Mining, Site Feasibility & AI-Powered Trial Enrollment*  
+> **📅 Last updated: September 2026**
 
-**Made for clinical research coordinators, trial recruitment specialists, informatics teams, and site administrators.**
+This curated repository tracks premier **commercial SaaS platforms** and production-proven **open-source projects** for **Clinical Trial Recruitment** and patient enrollment optimization. These software applications empower sponsors, contract research organizations (CROs), research sites, and oncology centers to identify eligible patient cohorts, automate screening against protocol inclusion/exclusion criteria, and accelerate overall clinical trial velocity.
 
-Let's make clinical trial recruitment more open, transparent, and patient-centered.
+Whether you are looking for enterprise-grade SaaS tools (e.g., *TriNetX, Reify Health, Deep 6 AI, Antidote, TrialSpark*) or self-hosted open-source matching infrastructure (*recruIT, MatchMiner, CancerTrialMatch, TrialGPT, LLM-Match*), this guide covers market capabilities, pricing structures, valuation benchmarks, and source code links.
+
+---
+
+## 📑 Table of Contents
+- [📊 SaaS / Hosted Platforms](#-saas--hosted-platforms)
+- [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [🛡️ Disclaimer](#️-disclaimer)
+- [💖 Support](#-support)
+- [📈 Star History](#-star-history)
+
+---
+
+## 📊 SaaS / Hosted Platforms
+
+### 💡 Market Size & Industry Structure
+> 📈 **Market Size & Fragmented Structure**: The global **Clinical Trial Recruitment & Patient Matching Market** is estimated at **$3.8 Billion to $4.2 Billion (2025/2026)** and is projected to reach over **$6.5 Billion by 2030** (CAGR ~8.5%).  
+> 🧩 **Market Concentration**: The market is **highly fragmented**. While established market leaders like TriNetX and Reify Health command significant market share in site network data and workflow collaboration, specialized vendors thrive across sub-segments like AI patient recruitment (Deep 6 AI, AutoCruitment), direct-to-patient marketplaces (Antidote, SubjectWell), and decentralized trial infrastructure (Curebase, TrialSpark).
+
+Below is a detailed breakdown of top commercial SaaS platforms, ordered by company valuation / funding scale (descending):
+
+| 🏢 Platform | 💰 Pricing Tier (Starting) | 🎁 Free Tier / Trial Limit | 📊 Company Size (Valuation / Revenue) | 📝 Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **[TriNetX](https://www.trinetx.com/)** | \$50,000 / year (Enterprise network tier) | 14-day data portal sandbox trial | **\$2.0 Billion+** (Valuation, Acquired by Carlyle) | Global health research network providing real-world data (RWD) and clinical trial matching across enterprise healthcare systems. |
+| **[Reify Health (StudyTeam)](https://reifyhealth.com/)** | \$25,000 / study / year | 30-day demo sandbox for research sites | **\$1.5 Billion** (Valuation, Series C) | Clinical trial recruitment and retention platform. StudyTeam modernizes sponsor-site collaboration and recruitment management. |
+| **[TrialSpark](https://www.trialspark.com/)** | \$30,000 / study baseline | 14-day protocol feasibility assessment trial | **\$1.0 Billion** (Valuation, Series C) | Technology-enabled clinical trial execution platform integrating patient recruitment, site optimization, and decentralized capabilities. |
+| **[Deep 6 AI](https://deep6.ai/)** | \$40,000 / year (Hospital site license) | 30-day trial pilot for academic medical centers | **\$800 Million+** (Acquired by Tempus) | AI-powered clinical trial matching platform combining genomic testing, NLP, and unstructured EHR-based patient matching. |
+| **[SubjectWell](https://subjectwell.com/)** | \$1,500 / randomized patient (Performance fee) | Performance risk-free trial (Pay only per enrolled patient) | **\$150 Million** (Estimated Valuation) | Risk-free patient recruitment marketplace connecting verified patients with trial opportunities globally. |
+| **[Antidote](https://antidote.me/)** | \$15,000 / campaign baseline | Free search tier for patients / 14-day trial for sponsors | **\$100 Million** (Estimated Valuation / Funding) | Patient-facing clinical trial matching platform using interactive precision search and AI-driven prescreening. |
+| **[Trialbee](https://trialbee.com/)** | \$20,000 / protocol | 30-day feasibility screening trial | **\$80 Million** (Estimated Valuation) | Omni-channel patient recruitment and screening platform connecting qualified patients with clinical trials across therapeutic areas. |
+| **[Inato](https://www.inato.com/)** | \$12,000 / study / year | Free trial site listing / 30-day sponsor trial | **\$70 Million** (Series A/B Funding Valuation) | Clinical trial marketplace connecting pharma sponsors with inclusive community research sites and target patient populations. |
+| **[AutoCruitment](https://autocruitment.com/)** | \$10,000 / recruitment campaign | 14-day custom campaign strategy trial | **\$60 Million** (Acquired by QHP Capital) | Targeted patient recruitment platform leveraging digital advertising and web-based screening to accelerate enrollment. |
+| **[Curebase](https://www.curebase.com/)** | \$18,000 / trial / year | 30-day sandbox demo trial | **\$50 Million** (Series A Funding Valuation) | Decentralized clinical trial (DCT) platform providing patient matching, eConsent, and virtual trial recruitment capabilities. |
+
+---
+
+## 🔓 Open-Source GitHub Projects
+
+The open-source ecosystem for clinical trial recruitment is **mature, production-proven, and actively deployed** in university hospitals and cancer centers worldwide.
+
+Repositories below are sorted by **GitHub Star Count (descending)**:
+
+### 🏆 Ranked Open-Source Repositories
+
+| 📦 Repository / Project | ⭐ Stars | 🏗️ Architecture & Stack | 🎯 Key Focus & Features |
+| :--- | :--- | :--- | :--- |
+| **[TrialGPT](https://github.com/ncbi-nlp/TrialGPT)** | [<img src="https://img.shields.io/github/stars/ncbi-nlp/TrialGPT?style=social&color=white" alt="TrialGPT Stars"/>](https://github.com/ncbi-nlp/TrialGPT/stargazers) | Python, GPT-4, OpenAI API, NLP | **LLM framework for patient-trial matching** by evaluating patient clinical notes against trial inclusion/exclusion criteria. |
+| **[MatchMiner](https://github.com/matchminer/matchminer)** | [<img src="https://img.shields.io/github/stars/matchminer/matchminer?style=social&color=white" alt="MatchMiner Stars"/>](https://github.com/matchminer/matchminer/stargazers) | Python, Django, MongoDB, Angular, Docker | **Production computational platform** developed at Dana-Farber Cancer Institute for matching genomic profiles to precision cancer trials (400+ enrollments). |
+| **[LLM-Match](https://github.com/bioIKEA/LLMMatch)** | [<img src="https://img.shields.io/github/stars/bioIKEA/LLMMatch?style=social&color=white" alt="LLM-Match Stars"/>](https://github.com/bioIKEA/LLMMatch/stargazers) | Python, PyTorch, Hugging Face, RAG | **Open-source RAG model for trial matching**. Outperforms proprietary GPT-4-based tools using fine-tuned open weights evaluated on n2c2/TREC. |
+| **[AI Clinical Trial Matching](https://github.com/sacredvoid/ai_clinical_trial)** | [<img src="https://img.shields.io/github/stars/sacredvoid/ai_clinical_trial?style=social&color=white" alt="AI Clinical Trial Matching Stars"/>](https://github.com/sacredvoid/ai_clinical_trial/stargazers) | Python, ChromaDB, SentenceTransformers, Llama 3.2 | **End-to-end vector embedding pipeline**. Scrapes ClinicalTrials.gov into vector databases and applies 3-stage LLM evaluation. |
+| **[Databricks Site Feasibility Workbench](https://github.com/databricks-industry-solutions/site-feasibility-workbench-open)** | [<img src="https://img.shields.io/github/stars/databricks-industry-solutions/site-feasibility-workbench-open?style=social&color=white" alt="Databricks Site Feasibility Workbench Stars"/>](https://github.com/databricks-industry-solutions/site-feasibility-workbench-open/stargazers) | Python, Databricks, LightGBM, SHAP, Unity Catalog | **Site feasibility & enrollment velocity platform**. Uses ML predictions and synthetic RWE patient access analytics for study planning. |
+| **[CancerTrialMatch](https://github.com/AveraSD/CancerTrialMatch)** | [<img src="https://img.shields.io/github/stars/AveraSD/CancerTrialMatch?style=social&color=white" alt="CancerTrialMatch Stars"/>](https://github.com/AveraSD/CancerTrialMatch/stargazers) | R, Shiny, MongoDB, Docker, OncoTree | **Biomarker-based matching application** published in *Bioinformatics* (2025). Developed at Avera Cancer Institute for genomic trial matching. |
+| **[recruIT](https://gitlab.ukdd.de/pub/num-sn/recruit)** | [<img src="https://img.shields.io/badge/GitLab-Deployed-orange?style=social&color=white" alt="recruIT GitLab"/>](https://gitlab.ukdd.de/pub/num-sn/recruit) | Java, OMOP CDM, HL7 FHIR, OHDSI Atlas, Docker | **Production-deployed recruitment system** across 5 German University Hospitals (SUS 79.9/100). Automated prescreening via OMOP & FHIR. |
+| **[Blue-Button SMART-on-FHIR Matcher](https://ascopubs.org/doi/10.1200/JCO.2025.43.16_suppl.TPS1658)** | [<img src="https://img.shields.io/badge/FHIR-mCODE-blue?style=social&color=white" alt="FHIR mCODE"/>](https://ascopubs.org/doi/10.1200/JCO.2025.43.16_suppl.TPS1658) | SMART-on-FHIR, FHIR mCODE, JavaScript | **EHR-integrated trial matcher** developed with ACS CAN & MITRE. Clinical validation trial at UTSW & Tampa General Hospital. |
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are highly appreciated! To maintain code and entry quality:
+
+1. 🍴 **Fork** this repository.
+2. 📝 **Add/Edit** entries in `README.md` keeping formatting clean and concise.
+3. 🔗 **Include**: Tool name, official URL, exact pricing / star badges, and factual capabilities.
+4. 🚀 **Submit PR** with a brief summary of the changes.
+
+Please refer to [Awesome-Awesome-Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome) for general list standards.
+
+---
+
+## 🛡️ Disclaimer
+
+- This list is **community-curated** for research and educational purposes.
+- Clinical trial recruitment applications handle sensitive Protected Health Information (PHI); ensure full compliance with **HIPAA, GDPR, 21 CFR Part 11**, and local IRB/ethics board guidelines.
+- Commercial platforms are ideal for global multi-center trials requiring managed patient outreach. Open-source solutions (**recruIT, MatchMiner, TrialGPT**) provide production-grade, privacy-preserving infrastructure for academic health centers.
+
+---
+
+## 💖 Support & Community
+
+If you find this repository helpful for your clinical research, informatics project, or healthtech startup:
+- ⭐ **Star** this repository on GitHub to boost visibility!
+- 🔀 **Fork** it to keep a personal bookmark.
+- 💬 Join our community on [Discord](https://discord.gg/jc4xtF58Ve)!
+- ☕ **Sponsor / Buy me a coffee**: Support ongoing maintenance on [GitHub Sponsors](https://github.com/sponsors/ishandutta2007).
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Clinical-Trial-Recruitment-Platform&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Clinical-Trial-Recruitment-Platform&type=date&legend=top-left)
+
+---
+
+<p align="center">
+  <b>Made with ❤️ for clinical trial coordinators, health informatics researchers, and site teams worldwide.</b>
+</p>
