@@ -57,11 +57,11 @@ Below is a detailed breakdown of top commercial SaaS platforms, ordered by compa
 
 The open-source ecosystem for clinical trial recruitment is **mature, production-proven, and actively deployed** in university hospitals and cancer centers worldwide.
 
-Repositories below are sorted by **GitHub Star Count (descending)**:
+Repositories below are sorted by **GitHub Stars_Count (descending)**:
 
 ### 🏆 Ranked Open-Source Repositories
 
-| 📦 Repository / Project | ⭐ Stars | 🏗️ Architecture & Stack | 🎯 Key Focus & Features |
+| 📦 Repository / Project | ⭐ GitHub_Stars | 🏗️ Architecture & Stack | 🎯 Key Focus & Features |
 | :--- | :--- | :--- | :--- |
 | **[TrialGPT](https://github.com/ncbi-nlp/TrialGPT)** | [<img src="https://img.shields.io/github/stars/ncbi-nlp/TrialGPT?style=social&color=white" alt="TrialGPT Stars"/>](https://github.com/ncbi-nlp/TrialGPT/stargazers) | Python, GPT-4, OpenAI API, NLP | **LLM framework for patient-trial matching** by evaluating patient clinical notes against trial inclusion/exclusion criteria. |
 | **[MatchMiner](https://github.com/matchminer/matchminer)** | [<img src="https://img.shields.io/github/stars/matchminer/matchminer?style=social&color=white" alt="MatchMiner Stars"/>](https://github.com/matchminer/matchminer/stargazers) | Python, Django, MongoDB, Angular, Docker | **Production computational platform** developed at Dana-Farber Cancer Institute for matching genomic profiles to precision cancer trials (400+ enrollments). |
@@ -80,7 +80,7 @@ Contributions are highly appreciated! To maintain code and entry quality:
 
 1. 🍴 **Fork** this repository.
 2. 📝 **Add/Edit** entries in `README.md` keeping formatting clean and concise.
-3. 🔗 **Include**: Tool name, official URL, exact pricing / star badges, and factual capabilities.
+3. 🔗 **Include**: Tool name, official URL, exact pricing / Stars_Badges, and factual capabilities.
 4. 🚀 **Submit PR** with a brief summary of the changes.
 
 Please refer to [Awesome-Awesome-Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome) for general list standards.
@@ -114,3 +114,12 @@ If you find this repository helpful for your clinical research, informatics proj
 <p align="center">
   <b>Made with ❤️ for clinical trial coordinators, health informatics researchers, and site teams worldwide.</b>
 </p>
+
+## ⭐ Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-Clinical-Trial-Recruitment-Platform&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-Clinical-Trial-Recruitment-Platform_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-Clinical-Trial-Recruitment-Platform_growth.svg">
+  </picture>
+</a>
